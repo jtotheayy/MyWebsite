@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<style>
+
+    <!-- DEVELOPER: Jay Santamaria, IS117-001, Fall 2022 - >
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        background-color: darkblue;
+        margin: 0 auto;
+        align-content: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    body {
+        background-color: #38b1f1;
+        border: 3px solid black;
+        width: 98%;
+        max-width: 1200px;
+    }
+
+    header {
+        background-color: #38b1f1;
+        font-size: 30px;
+        border-bottom: 3px solid black;
+    }
+
+        header h1 {
+            text-align: center;
+            border: 10px solid white;
+            border-radius: 40%;
+            margin-left: 130px;
+            margin-right: 350px;
+            width: auto;
+        }
+
+    #homebutton {
+        margin-left: 60px;
+        float: left;
+    }
+
+    header li a {
+        margin: 0;
+    }
+
+    header ul {
+    }
+
+    aside {
+        background-color: #38b1f1;
+        padding: 20px 20px 20px 20px;
+    }
+
+        aside a:hover {
+            background-color: orange;
+        }
+
+        aside a {
+            padding: 20px 10px;
+            color: #800000;
+            font-size: 30%;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 30%;
+            background-color: lightgoldenrodyellow;
+            text-decoration: none;
+        }
+
+        aside ul {
+            margin-right: 30px;
+            padding: 0;
+            list-style-type: none;
+            float: right;
+        }
+
+            aside ul li {
+                float: left;
+            }
+
+                aside ul li a {
+                    display: block;
+                    text-align: center;
+                    text-decoration: none;
+                    background-color: #800000;
+                    color: white;
+                    font-weight: bold;
+                }
+
+
+
+            aside ul ul {
+                float: none;
+                display: none;
+                top: 0;
+            }
+
+            aside ul li ul a {
+                font-size: 25%;
+                background-color: tan;
+            }
+
+            aside ul li:hover > ul {
+                display: inline-block;
+            }
+
+            aside ul ul li {
+            }
+
+        aside > ul::after {
+            content: "";
+            clear: both;
+        }
+
+    section h1 {
+        width: auto;
+        border: 3px solid black;
+        background-color: grey;
+    }
+    
+    section {
+        
+        margin: auto;
+        margin-top:10px;
+        margin-bottom:60px;
+        width: 70%;
+        background-color: white;
+        border: 2px solid black;
+    }
+
+
+    div {
+        width: 350px;
+        border: 3px solid black;
+        background-color: lightblue;
+        border-radius: 30%;
+        padding: 0 45px;
+        margin-bottom: 30px;
+        float: left;
+    }
+
+
+    #socials li {
+        list-style: none;
+        text-decoration: none;
+    }
+
+    
+
+        section img {
+            padding: 20px 0 0 10px;
+        }
+
+        section p {
+            font-size: 20px;
+            padding-left: 50px;
+        }
+
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: blue;
+        color: white;
+        text-align: center;
+    }
+
+        footer p {
+            text-align: center;
+            padding: 0.6em 0;
+        }
+
+            footer p a {
+                color: white;
+            }
+
+    @media only screen and (max-width: 735px) {
+        aside a {
+            position: relative;
+            width: 100%;
+        }
+
+        header {
+            float: none;
+            border: none;
+            margin: auto;
+            padding: 0;
+        }
+
+        aside {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+            aside li {
+                width: 100%;
+                margin-left: 0;
+            }
+
+        #menu {
+            color: white;
+            display: block;
+        }
+
+        header ul {
+            border: none;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+
+
+        aside a {
+            padding: 5px;
+            width: 100%;
+            color: black;
+            float: right;
+        }
+
+        header ul li a {
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 0;
+            margin-left: 0;
+        }
+
+        section {
+            float: left;
+        }
+
+        header h1 {
+            float: right;
+        }
+
+        aside ul li:hover > ul {
+            display: none;
+        }
+    }
+</style>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Resumes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+</head>
+
+<body>
+    <header id="top">
+        <aside>
+            <ul>
+                <li id="menu"><a href="websitePage1.html">Home</a></li>
+
+                <li>
+                    <a href="Contacts.html">Contacts</a>
+                    <ul>
+                        <li><a href="Contacts.html">Email & Phone</a></li>
+                        <li><a href="Contacts.html">Socials</a></li>
+                    </ul>
+                </li>
+                <li><a href="About.html">About</a></li>
+                <li>
+                    <a href="Resumes.html">Resumes</a>
+                    <ul>
+                        <li><a href="Resumes.html">Bartending</a></li>
+                        <li><a href="Resumes.html">Software</a></li>
+                    </ul>
+                </li>
+                <li><a href="Products.html">Products/Work</a></li>
+            </ul>
+        </aside>
+        <a id="homebutton" href="websitePage1.html"><img src="furniture.png" alt="HOME" width="70" height="70" /></a>
+
+        <h1>Resumes</h1>
+
+
+    </header>
+    <section id="software">
+        <h1>Software Engineer Resume</h1>
+        <p>
+            <h2>Jay Santamaria</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Summary</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Areas of Experience</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Skills</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Education</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Job Experience</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+        </p>
+    </section>
+
+    <section id="bartend">
+        <h1>Bartender Resume</h1>
+
+        <p>
+            <h2>Jay Santamaria</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Summary</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Areas of Experience</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Skills</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Education</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+            <h3>Job Experience</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet massa vitae tortor.
+        </p>
+    </section>
+
+
+
+
+    <footer>
+        <p>&copy; November 2022 - Jay Santamaria <a href="#">Terms of Service</a>  <a href="#">Privacy Statements</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</body>
+</html>
